@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+}
+
+@font-face {
+    font-family: SFU;
+    src: url('/fonts/SFUIDisplay-Regular.eot');
+    src: url('/fonts/SFUIDisplay-Regulard41d.eot?#iefix') format('embedded-opentype'), url('/fonts/SFUIDisplay-Regular.woff2') format('woff2'), url('/fonts/SFUIDisplay-Regular.woff') format('woff'), url('/fonts/SFUIDisplay-Regular.svg#SFUIDisplay-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    line-height: 23px;
+    color: #444444;
+    font-family: SFU;
+    font-size: 17px;
+}
+
+.bg_header_page {
+    background: #16495c;
+}
+
+#header {
+    transition: 0.5s;
+    width: 100%;
+}
+
+
+/* .logo {
+    width: 25%;
+}
+
+.logo img {
+    width: 70px;
+} */
+
+#nav_sticky {
+    padding-right: 30px;
+}
+
+.nav_header {
+    width: 75%;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: end;
+    color: #ffff;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu__item a {
+    text-decoration: none;
+    transition: all 0.3s;
+    display: block;
+    position: relative;
+    transform: translate(0, 0) !important;
+    color: white;
+    padding-bottom: 1px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.menu__item {}
+
+.menu {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    line-height: 23px;
+    font-size: 16px;
+    z-index: 99999;
+}
+
+.menu_logo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.text_logo {
+    text-align: center;
+    /* text-transform: uppercase; */
+    width: 500px;
+    margin: auto;
+}
+
+.text_logo h5 {
+    font-size: 30px;
+    color: #4d4d4d;
+}

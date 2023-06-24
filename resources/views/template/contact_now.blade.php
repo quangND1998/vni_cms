@@ -1,0 +1,56 @@
+<div class="page_contact" style="background: aliceblue;">
+    <div class="container">
+        <div class="row">
+
+            {{--  <div class="col-lg-12 single_page_contact">
+                <h1 class="title"> {{__($section->title)}}</h1>
+                <hr class="line" style="padding-bottom:1rem">
+                <span class="content_contact"> {{__($section->sub_title)}}</span>
+                    <button class="btn_hotline">Hotline :{!!__($section->description)!!}</button>
+
+            </div>  --}}
+        </div>
+        <div class="form_contact">
+            <form id="contact-form" method="POST" action="{{ route('contact.store') }}" novalidate="novalidate">
+                {{ csrf_field() }}
+                <div class="form-group {{ $errors->has('name') ? 'has-error' : '' }}">
+                    <input type="text" name="name" id="message_name" class="form-control" placeholder="Your Name">
+                    @if ($errors->has('name'))
+                    <span class="text-red">
+                        <P class="text-danger">{{ $errors->first('name') }}</P>
+                    </span>
+                    @endif
+                </div>
+                <div class="form-group {{ $errors->has('email') ? 'has-error' : '' }}">
+                    <input type="text" name="email" id="message_email" class="form-control" placeholder="Your Email Address">
+                    @if ($errors->has('email'))
+                    <span class="text-red">
+                        <P class="text-danger">{{ $errors->first('email') }}</P>
+                    </span>
+                    @endif
+                </div>
+                <div class="form-group {{ $errors->has('phone') ? 'has-error' : '' }}">
+                    <input type="text" name="phone" id="message_phone" class="form-control" placeholder="Your Phone Number">
+                    @if ($errors->has('phone'))
+                    <span class="text-red">
+                        <P class="text-danger">{{ $errors->first('phone') }}</P>
+                    </span>
+                    @endif
+                </div>
+                <div class="form-group {{ $errors->has('message') ? 'has-error' : '' }}">
+                    <textarea class="form-control" name="message" id="message_message" placeholder="Type your message here.." rows="5"
+                        cols="4"></textarea>
+                    @if ($errors->has('phmessageone'))
+                    <span class="text-red">
+                        <P class="text-danger">{{ $errors->first('message') }}</P>
+                    </span>
+                    @endif
+                </div>
+                <div style="text-align:center">
+                    <button type="submit" class="btn btn-cta text-uppercase" style="">{{__('send_us')}}</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

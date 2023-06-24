@@ -1,0 +1,1705 @@
+@media (min-width: 1600px) {
+	.mobile_icon{
+		display: none ;
+	  }
+	.mxh_slide {
+	    top: 18.5%;
+	}
+	.immersive-1{
+		display: flex;
+	}
+}
+@media (max-width: 1599px) {
+	.immersive-1{
+		display: flex;
+	}
+}
+
+@media all and (max-width: 1300px) {
+	.mobile_icon{
+		display: none ;
+	  }
+	#slider_img {
+		height: 70vh ;
+	}
+
+	.box_cont img {
+		width: 30px;
+	}
+	.name_c {
+	    margin-top: 4px;
+	}
+	.slick-prev {
+	    left: -30px;
+	}
+	.slick-next {
+	    right: -30px;
+	}
+	.immersive-1{
+		display: flex;
+	}
+	/* lien hệ */
+	.right_fot, .left_fot{
+		width: 50%;
+	}
+	.form-group {
+		width: 75% !important;
+		margin: auto;
+		padding: 2rem;
+	}
+	#contact-form{
+		padding:0 2rem;
+	}
+}
+@media all and (max-width: 1099px) {
+	.mobile_icon{
+		display: block ;
+	  }
+	#slider_img {
+		height: 70vh ;
+	}
+	#header{
+
+	}
+
+	#nav_sticky {
+		transition: all 0.5s;
+	}
+	.right_share {
+	    position: relative;
+	    right: 0;
+	    top: 0;
+	    text-align: right;
+	    margin-top: 10px;
+	}
+	.nav_header, .logo {
+	    width: 50%;
+	}
+	.menu-content {
+	    height: 60px;
+	}
+	.center_text h2 {
+	    font-size: 20px;
+	}
+	.center_text h1 {
+		font-size: 33px;
+	}
+	.center_text h3 {
+		font-size: 18px;
+	}
+	.box_cat h4 {
+		font-size: 14px;
+	}
+	.menu__sub-menu > li > a {
+	    padding-left: 2em;
+	    font-size: 14px;
+	    text-transform: capitalize;
+	}
+	.menu-content.open {
+	    background: #002a5e;
+	    padding-right: 0px;
+	    width: 25%;
+	    top: 0;
+	    right: 0;
+	    height: 100vh;
+	    overflow-y: scroll;
+	    position: fixed;
+	}
+	.menu__item a .arrow:before {
+		padding: 5px;
+	}
+	.menu-content.close {
+		transition: all 0.5s;
+		height: 100vh;
+		position: absolute;
+	    right: 0;
+	    bottom: 0;
+	    top: 0;
+		width: 0;
+    	transition-timing-function: cubic-bezier(0.45, 0.46, 0.54, 0.54);
+	}
+	.embed-wrap {
+	    height: 450px;
+	}
+	.img_to_brd {
+		height: auto;
+	}
+	#desktop {
+		display: none;
+	}
+	#mobile {
+		display: block;
+	}
+	.menu-button.visible-xs.is-active {
+	    right: 26%;
+	}
+	.menu > ul > li {
+	    margin: 0;
+	    padding: 15px 0px 15px 15px;
+	}
+	.menu__link i.fas.fa-caret-down {
+		display: none;
+	}
+	.menu__sub-menu {
+	    position: relative;
+	    padding:  0;
+	    display: none;
+	    background: #16495c;
+	    margin-top: 10px;
+	}
+	.text_news h5 {
+	    font-size: 17px;
+	}
+	.menu__sub-menu__item {
+    	padding: 5px 0;
+    }
+    .menu__sub-menu.open {
+    	top: 0 !important
+    }
+	ul.menu__sub-menu.open::before, ul.menu__sub-menu.open::after {
+		display: none;
+	}
+	.lang_mb {
+		padding-top: 15px;
+		text-align: center;
+	}
+	.lang_mb a {
+		margin: 0 10px;
+		color: white;
+	}
+	.dachon img {
+		border: 2px solid #cccc;
+	}
+
+	.menu-button {
+		top: 9px;
+	}
+	#nav {
+	    position: fixed;
+	    top: 0;
+	    z-index: 99999;
+	    left: 0;
+	    right: 0;
+	}
+	/* lien hệ */
+	.right_fot, .left_fot{
+		width: 50%;
+	}
+	.form-group {
+		width: 100% !important;
+		margin: auto;
+		padding: 2rem;
+	}
+	#contact-form{
+		padding:0 2rem;
+	}
+}
+@media all and (max-width: 1024px) {
+	.logo {
+		padding: 5px 0 5px 20px;
+	}
+	#header{
+		height: 70px;
+	}
+	.logo{
+		width: auto;
+		height: 100%;
+	}
+	.logo-nemoviz{
+		height: 100%;
+		width: auto;
+	}
+	.mobile_icon{
+		display: block ;
+	}
+	.mobile_icon ul{
+		padding-left:0;
+	}
+	.text_slide h1{
+		padding-bottom:2rem
+	}
+	#page_3{
+		padding: 30px 10px 0px;
+
+	}
+	#page_6 {
+		padding: 10px 0;
+	}
+	#slider_img {
+		height: 70vh ;
+	}
+	.box_cat{
+		display: flex;
+	}
+	.box_cat h4{
+		font-size: 15px;
+	}
+	#nav_sticky {
+		transition: all 0.5s;
+	}
+	.right_share {
+	    position: relative;
+	    right: 0;
+	    top: 0;
+	    text-align: right;
+	    margin-top: 10px;
+	}
+	.nav_header, .logo {
+	    width: 50%;
+	}
+	.menu-content {
+	    height: 60px;
+	}
+	.center_text h2 {
+	    font-size: 20px;
+	}
+	.center_text h1 {
+		font-size: 33px;
+	}
+	.center_text h3 {
+		font-size: 18px;
+	}
+	.box_cat h4 {
+		font-size: 14px;
+	}
+	.menu__sub-menu > li > a {
+	    padding-left: 2em;
+	    font-size: 14px;
+	    text-transform: capitalize;
+	}
+	.menu-content.open {
+		background: #002a5e;
+	    padding-right: 0px;
+	    width: 25%;
+	    top: 0;
+	    right: 0;
+	    height: 100vh;
+	    overflow-y: scroll;
+	    position: fixed;
+	}
+	.menu__item a .arrow:before {
+		padding: 5px;
+	}
+	.menu-content.close {
+		transition: all 0.5s;
+		height: 100vh;
+		position: absolute;
+	    right: 0;
+	    bottom: 0;
+	    top: 0;
+		width: 0;
+    	transition-timing-function: cubic-bezier(0.45, 0.46, 0.54, 0.54);
+	}
+	.embed-wrap {
+	    height: 450px;
+	}
+	.img_to_brd {
+		height: auto;
+	}
+	#desktop {
+		display: none;
+	}
+	#mobile {
+		display: block;
+	}
+	.menu-button.visible-xs.is-active {
+	    right: 26%;
+	}
+	.menu > ul > li {
+	    margin: 0;
+	    padding: 15px 0px 15px 15px;
+	}
+	.menu__link i.fas.fa-caret-down {
+		display: none;
+	}
+	.menu__sub-menu {
+	    position: relative;
+	    padding:  0;
+	    display: none;
+	    background: #16495c;
+	    margin-top: 10px;
+	}
+	.text_news h5 {
+	    font-size: 17px;
+	}
+	.menu__sub-menu__item {
+    	padding: 5px 0;
+    }
+    .menu__sub-menu.open {
+    	top: 0 !important
+    }
+	ul.menu__sub-menu.open::before, ul.menu__sub-menu.open::after {
+		display: none;
+	}
+	.lang_mb {
+		padding-top: 15px;
+		text-align: center;
+	}
+	.lang_mb a {
+		margin: 0 10px;
+		color: white;
+	}
+	.dachon img {
+		border: 2px solid #cccc;
+	}
+
+	.menu-button {
+		top: 9px;
+	}
+	#nav {
+	    position: fixed;
+	    top: 0;
+	    z-index: 99999;
+	    left: 0;
+	    right: 0;
+	}
+
+	.der_news {
+	    height: 45px;
+	}
+	.chon_cat li {
+	    margin: 0px 5px;
+	    margin-bottom: 10px;
+	}
+	.tintrong {
+	    padding: 0 15px 30px 15px;
+	    width: 50%;
+	    float: left;
+	}
+	.name_c {
+	    margin-top: 0;
+	}
+	.tinlienquan .der_news {
+		display: none;
+	}
+	.box_cont:nth-child(odd), .box_cont:nth-child(even) {
+	    width: 100%;
+	}
+	iframe.fb_link {
+	    width: 70%;
+	}
+
+	.img_doitac {
+		width: 240px;
+	}
+	/* dien hoa 3d */
+	.title-visualization {
+		margin: auto;
+		padding-bottom: 2rem;
+		text-align: center;
+	}
+	.content_visuali {
+		width: 700px;
+		padding: 0rem 2rem;
+	}
+	.product_visual {
+		margin-top: 7rem;
+	}
+	.page_item {
+		display: flex;
+		margin-top: 3rem;
+		align-content: space-between !important;
+		justify-content: flex-start !important;
+		flex-wrap: wrap !important;
+	}
+	.item-slide {
+		width: 45%;
+		position: relative;
+		padding: 1rem;
+		background: #ffff;
+		/* margin-right: 2rem; */
+		border-radius: 5px;
+		margin-left: 1rem;
+		margin-top: 2rem;
+	}
+	/* tin tức  */
+	#page_1{
+		padding:50px 0 50px;
+	}
+	/* tintuwsc */
+	.immersive-1{
+		display: flex;
+
+	}
+	.immersive-content {
+		width: 50%;
+		padding: 2rem;
+	}
+	.text-immersive {
+		width: auto;
+		font-size: 15px;
+	}
+	/* lien hệ */
+	.right_fot, .left_fot{
+		width: 50%;
+	}
+	.form-group {
+		width: 100% !important;
+		margin: auto;
+		padding: 2rem;
+	}
+	#contact-form{
+		padding:0 2rem;
+	}
+}
+
+@media all and (max-width: 800px) {
+	.logo {
+		padding: 5px 0 5px 20px;
+	}
+	#header{
+		height: 70px;
+	}
+	.logo{
+		width: auto;
+		height: 100%;
+	}
+	.logo-nemoviz{
+		height: 100%;
+		width: auto;
+	}
+	.mobile_icon{
+		display: block;
+	}
+	.mobile_icon ul{
+		padding-left:0;
+	}
+	.text_slide h1{
+		padding-bottom:2rem
+	}
+	#page_3{
+		padding: 30px 10px 0px;
+
+	}
+	#page_6 {
+		padding: 10px 0;
+	}
+	/* trang chủ */
+	#slider_img {
+		height: 55vh ;
+	}
+
+	.video_content{
+		font-size: 16px !important;
+	}
+	.watch_video{
+		margin-top:2rem;
+	}
+	.box_cat{
+		display: flex;
+	}
+	.box_cat h4{
+		font-size: 15px;
+	}
+	.menu-content.open {
+		width: 35%;
+	}
+	.menu-button.visible-xs.is-active {
+	    right: 37%;
+	}
+	#canle {
+	    padding: 30px;
+	}
+	.der_news {
+	    height: 20px;
+	}
+	.read_view_2 {
+		display: none;
+	}
+	iframe.fb_link {
+	    width: 94%;
+	}
+	.titl_mxh h4 {
+	    margin: 0px 0 10px 15px;
+	}
+	.lienket {
+		left: 30px;
+	}
+	.embed-wrap {
+	    height: 400px;
+	}
+	#canle iframe {
+	    height: 350px !important;
+	}
+	.box_project_nho {
+	    width: 33.33%;
+	}
+	.tintrong {
+	    padding: 0 15px 15px 15px;
+
+	}
+
+     #page_4 .text-container{
+                padding: 20px;
+                font-size: 20px;
+		line-height: 24px;
+            }
+	 #page_4 .vr360-title{
+		font-size: 22px;
+	    }
+	#page_7 .parent {
+                width: 100%;
+                margin: 20px 0px
+            }
+			/* dien hoa 3d */
+	.title-visualization {
+		margin: auto;
+		padding-bottom: 2rem;
+		text-align: center;
+	}
+	.content_visuali {
+		width: 500px;
+		padding: 0rem 2rem;
+	}
+	.product_visual {
+		margin-top: 7rem;
+	}
+	.page_item {
+		display: flex;
+		margin-top: 3rem;
+		/* justify-content: flex-end !important; */
+		align-content: space-between !important;
+		justify-content: flex-start !important;
+		flex-wrap: wrap !important;
+		/* flex-direction: row-reverse !important; */
+	}
+	.item-slide {
+		width: 43%;
+		position: relative;
+		padding: 1rem;
+		background: #ffff;
+		/* margin-right: 2rem; */
+		border-radius: 5px;
+		margin-left: 1rem;
+		margin-top: 2rem;
+	}
+	/* tin tức  */
+	/* tintuwsc */
+	.immersive-1{
+		display: flex;
+
+	}
+	.immersive-content {
+		width: 50%;
+		padding: 2rem;
+	}
+	.text-immersive {
+		width: auto;
+		font-size: 15px;
+	}
+	#page_1{
+		padding:50px 0 50px;
+	}
+	/* lien hệ */
+	.right_fot, .left_fot{
+		width: 90%;
+	}
+	.left_fot{
+		padding-right:0;
+	}
+	.form-group {
+		width: 100% !important;
+		margin: auto;
+		padding: 2rem;
+	}
+	#contact-form{
+		padding:0 2rem;
+	}
+
+}@media all and (max-width: 768px) {
+	.logo {
+		padding: 5px 0 5px 20px;
+	}
+	#header{
+		height: 70px;
+	}
+	.logo{
+		width: auto;
+		height: 100%;
+	}
+	.logo-nemoviz{
+		height: 100%;
+		width: auto;
+	}
+	.mobile_icon{
+		display: block;
+	}
+	.mobile_icon ul{
+		padding-left:0;
+	}
+	.text_slide h1{
+		padding-bottom:2rem
+	}
+	#page_3{
+		padding: 30px 10px 0px;
+
+	}
+	#page_6 {
+		padding: 10px 0;
+	}
+	/* trang chủ */
+	#page_1{
+		padding:30px 0 30px;
+	}
+	#slider_img {
+		height: 65vh ;
+	}
+
+	.video_content{
+		font-size: 16px !important;
+	}
+	.watch_video{
+		margin-top:2rem;
+	}
+	.box_cat{
+		display: flex;
+	}
+	.box_cat h4{
+		font-size: 14px;
+	}
+
+
+    body {
+        font-size: 14px;
+    }
+
+    .icon_social {
+        display: flex;
+        width: 100%;
+        margin-left: 0px;
+        background: #3b5998;
+        bottom: 0px;
+    }
+
+
+    .icon_link {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        height: 50px;
+    }
+
+    .icon_social img{
+        height: 50px;
+        width: 50px;
+        padding: 5px 0px;
+    }
+
+    .jxPOhn {
+        display: none;
+    }
+
+    #footer {
+        height: 150px;
+    }
+
+    div[id*="gb-widget-"] {
+        bottom: 60px !important;
+        right: 5px !important;
+    }
+
+    div[class*="q8c6tt-"] ~ a {
+        display: none
+    }
+
+    #wrapper {
+        overflow: hidden;
+    }
+
+    .img_doitac {
+        width: 210px;
+    }
+
+    .chon_cat li:first-child {
+        width: 100%;
+    }
+
+    .text_project h4, .text_project .der_project {
+        height: auto;
+    }
+
+    .pagination {
+        padding: 0;
+    }
+
+    .chon_cat li {
+        float: left;
+        display: block;
+        width: 50%;
+        margin: 0;
+        line-height: 25px;
+    }
+
+    .chon_cat li a {
+        font-size: 15px;
+    }
+	.company{
+		padding:2rem 2rem;
+	}
+	/* dien hoa 3d */
+	.title-visualization {
+		margin: auto;
+		padding-bottom: 2rem;
+		text-align: center;
+	}
+	.content_visuali {
+		width: 500px;
+		padding: 0rem 2rem;
+	}
+	.product_visual {
+		margin-top: 7rem;
+	}
+	.page_item {
+		display: flex;
+		margin-top: 3rem;
+		/* justify-content: flex-end !important; */
+		align-content: space-between !important;
+		justify-content: flex-start !important;
+		flex-wrap: wrap !important;
+		/* flex-direction: row-reverse !important; */
+	}
+	.item-slide {
+		width: 43%;
+		position: relative;
+		padding: 1rem;
+		background: #ffff;
+		/* margin-right: 2rem; */
+		border-radius: 5px;
+		margin-left: 1rem;
+		margin-top: 2rem;
+	}
+	/* tintuwsc */
+	.immersive-1{
+		display: flex;
+
+	}
+	.immersive-content {
+		width: 50%;
+		padding: 2rem;
+	}
+	.text-immersive {
+		width: auto;
+		font-size: 15px;
+	}
+	/* lien hệ */
+	.form-group {
+		width: 100% !important;
+		margin: auto;
+		padding: 2rem;
+	}
+	#contact-form{
+		padding:0 2rem;
+	}
+
+}
+@media all and (max-width: 680px) {
+	.logo {
+		padding: 5px 0 5px 20px;
+	}
+	#header{
+		height: 70px;
+	}
+	.logo{
+		width: auto;
+		height: 100%;
+	}
+	.logo-nemoviz{
+		height: 100%;
+		width: auto;
+	}
+	.mobile_icon{
+		display: block;
+	}
+	.mobile_icon ul{
+		padding-left:0;
+	}
+	.text_slide h1{
+		padding-bottom:2rem
+	}
+	#page_3{
+		padding: 30px 10px 0px !important;
+
+	}
+	#page_6 {
+		padding: 10px 0;
+	}
+	/* trang chủ */
+	#slider_img {
+		height: 65vh ;
+	}
+
+	#page_1{
+		padding-top:30px !important;
+	}
+	.video_content{
+		font-size: 16px !important;
+	}
+	.watch_video{
+		margin-top:2rem;
+	}
+
+	.menu-button.visible-xs.is-active {
+	    right: 62%;
+	}
+	.menu-content.open {
+		width: 60%;
+	}
+
+	#page_1, #page_2,#page_3, #page_7{
+	    padding: 30px 10px;
+	}
+	.title_big {
+	    font-size: 24px;
+	}
+	#page_4 {
+		padding: 0 0 0 0;
+	}
+	.box_business {
+		width: 100%;
+	}
+	.der_about {
+	    padding-right: 0px;
+	}
+	#page_5 {
+		padding: 0;
+	}
+	#top {
+		display: none;
+	}
+	.chat-box {
+	    bottom: 0px;
+	}
+	.timkiem button span {
+	    display: none;
+	}
+	.timkiem button {
+	    width: 80px;
+	    padding: 7px;
+	    text-align: center;
+	}
+	.timkiem button img {
+	    margin-top: 0;
+	    margin-left: 0;
+	    float: inherit;
+	}
+	footer {
+	    padding: 30px 0 0 15px;
+	    background: url(../../images/footer/footer_mb.png);
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: cover;
+	}
+	#close {
+		display: none;
+	}
+	.slider_brand .slick-next, .slider_brand .slick-prev {
+	    bottom: 23%;
+	}
+	.slider_news .slick-track {
+	    padding: 20px 0;
+	}
+	.titl_mxh h4 {
+	    margin: 0 0 15px;
+	}
+	.menu-button {
+	    top: 13px;
+	}
+
+	.search_con {
+	    position: relative;
+	    top: 0px;
+		text-align: center;
+	}
+	.mxh img {
+	    margin-right: 15px;
+	    margin-left: 0;
+	}
+	.if_home {
+		height: 350px;
+	}
+	.embed-wrap {
+	    height: 300px;
+	}
+
+
+	.menu-button {
+	    right: 10px;
+	}
+	/* trang chủ */
+	.right_about img {
+		width: 100%;
+		float: right;
+	}
+	.centerab{
+		display: block;
+	}
+	.left_about {
+	    width: 100%;
+	    top: 0;
+	}
+	.right_about {
+		display: block;
+		margin-top:2rem;
+		width: 100%;
+	}
+	.video_content{
+		font-size: 12px !important;
+	}
+	.left_fot {
+	    width: 100%;
+	    float: left;
+	    margin-bottom: 30px;
+	}
+
+	.right_fot {
+	    width: 100%;
+	    float: left;
+	    overflow: hidden;
+
+		margin-top:0;
+	}
+	form#_frm_contact {
+	    margin: 0;
+	}
+	.box_group_from {
+	    padding: 15px 5px;
+	}
+	.slider_doitac {
+	    margin: 0;
+	}
+	.titl_mxh {
+	    float: left;
+	}
+	iframe.fb_link {
+	    width: 100%;
+	    float: left;
+	}
+	#canle {
+		padding: 15px;
+	}
+
+	.box_salient h4 {
+		margin-top: 15px;
+		font-size: 18px;
+	}
+
+	.text_news .der_news {
+		display: none;
+	}
+
+	.text_news h5 {
+		height: auto;
+	}
+
+	.der_nd {
+		margin-bottom: 0px;
+	}
+
+	.box_salient {
+	    padding: 0 15px 25px 15px;
+	    width: 100%;
+	}
+
+	.menu__sub-menu > li > a {
+		padding-left: 2px;
+		font-size: 11px;
+		text-transform: capitalize;
+	}
+
+
+	.content_news {
+	    width: 100%;
+	    float: left;
+	    padding-right: 0;
+	}
+
+	#slider_img {
+	    height: 50vh;
+	}
+	.box_project {
+	    width: 100%;
+	    padding: 15px 0;
+	}
+	.left_end {
+		width: 100%;
+		margin-bottom: 15px;
+		text-align: left;
+	}
+	.right_end {
+		width: 100%;
+		text-align: left;
+	}
+	/* */
+	.box_cat h4 {
+	    font-size: 13px;
+	    position: absolute;
+	    top: 10px;
+	    left: 10px;
+	    width: 50%;
+	    line-height: 20px;
+	    height: 40px;
+	    overflow: hidden;
+	}
+	.ico_cat {
+	    height: 30px;
+	}
+	.center_text {
+	    top: -25px;
+	    margin: 0;
+	    padding: 0 20px;
+	}
+	.center_text h2 {
+		font-size: 16px;
+	}
+	.center_text h1 {
+	    font-size: 28px;
+	}
+	.center_text h3 {
+	    font-size: 12px;
+	    margin: 20px 0 25px;
+	}
+	.center_text i.fas.fa-circle {
+	    font-size: 5px;
+	    position: relative;
+	    top: -3px;
+	    margin-right: 5px;
+	}
+	.watch_video img {
+	    top: 0px;
+	}
+
+	#page_4 .text-container{
+                padding: 15px;
+                font-size: 13px;
+		line-height: 17px;
+            }
+	    #page_4 .vr360-title{
+		font-size: 15px;
+		}
+
+	.img_doitac {
+		width: 140px;
+	}
+
+	.text_logo {
+		width: 350px;
+	}
+
+	.text_logo h5 {
+		font-size: 20px;
+	}
+
+	.left_about h3 {
+		font-size: 24px;
+		line-height: 34px;
+		text-align: center;
+	}
+
+	.content_form{
+		padding-bottom:2rem;
+	}
+	/* dien hoa 3d */
+	.title-visualization {
+		margin: auto;
+		padding-bottom: 2rem;
+		text-align: center;
+	}
+	.content_visuali {
+		width: 500px;
+		padding: 0rem 2rem;
+	}
+	.product_visual {
+		margin-top: 7rem;
+	}
+	.page_item {
+		display: flex;
+		margin-top: 3rem;
+		/* justify-content: flex-end !important; */
+		align-content: space-between !important;
+		justify-content: flex-start !important;
+		flex-wrap: wrap !important;
+		/* flex-direction: row-reverse !important; */
+	}
+	.item-slide {
+		width: 43%;
+		position: relative;
+		padding: 1rem;
+		background: #ffff;
+		/* margin-right: 2rem; */
+		border-radius: 5px;
+		margin-left: 1rem;
+		margin-top: 2rem;
+	}
+	/* tin tức  */
+	.immersive-1{
+		display: block;
+	}
+	.immersive-img{
+		width: 100% ;
+	}
+	.immersive-img iframe{
+		width: 100%;
+	}
+	.immersive-content{
+		width: 100%;
+    padding: 0rem 2rem;;
+	}
+	.text-immersive {
+		width: auto;
+	}
+	#page_1{
+		padding:30px 0 30px;
+	}
+
+	/* footer */
+	.col-company {
+
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: center;
+	}
+	.company_nemoviz{
+		width: 48%;
+		padding:1rem 2rem;
+	}
+	.contact_company{
+		width: 48%;
+	}
+	.contact_company ul{
+		padding-left:0;
+		padding:1rem 3rem;
+	}
+	.product_company {
+		width: 48%;
+	}
+	.product_company h3 {
+		text-align: left;
+		padding-left: 2rem;
+	}
+	.product_company ul {
+		padding: 1rem 3rem;
+	}
+	.list_product {
+		padding-left: 0rem;
+	}
+	/* tin tức */
+	.list_news {
+		display: flex;
+		margin-top: 7rem ;
+	}
+	.list_news2{
+		margin-top: 0rem ;
+	}
+	.title_news{
+		font-size: 12px;
+	}
+
+	/* lien hệ */
+	.form-group {
+		width: 100% !important;
+		margin: auto;
+		padding: 2rem;
+	}
+	#contact-form{
+		padding:0 2rem;
+	}
+
+}@media all and (max-width: 480px) {
+	.logo {
+		padding: 5px 0 5px 5px;
+	}
+	#header{
+		height: 60px;
+	}
+	.logo{
+		width: auto;
+		height: 100%;
+	}
+	.logo-nemoviz{
+		height: 100%;
+		width: auto;
+	}
+	.mobile_icon{
+		display: block;
+	}
+	.mobile_icon ul{
+		padding-left:0;
+	}
+	.text_slide h1{
+		padding-bottom:2rem
+	}
+	#page_3{
+		padding: 30px 10px 0px;
+
+	}
+	#page_6 {
+		padding: 10px 0;
+	}
+	.company_logo{
+		width: 65%;
+		height: auto;
+	}
+	/* trang chủ */
+	#slider_img {
+		height: 55vh ;
+	}
+
+	#page_1{
+		padding-top:30px;
+	}
+	.video_content{
+		font-size: 10px !important;
+	}
+	.watch_video{
+		margin-top:2rem;
+	}
+	#slider_img {
+		height: 65vh
+	}
+
+	.img_doitac {
+		width: 110px;
+	}
+
+	.text_logo {
+		width: 300px;
+		margin-top: 10px;
+	}
+
+	.text_logo h5 {
+		font-size: 18px;
+	}
+
+	.menu_logo {
+		margin: 10px 5px;
+	}
+	/* tin tức */
+	.immersive-1{
+		display: block;
+	}
+	.immersive-img{
+		width: 100% ;
+	}
+	.immersive-img iframe{
+		width: 100%;
+	}
+	.immersive-content{
+		width: 100%;
+    padding: 0rem 1.5rem;;
+	}
+	.text-immersive {
+		width: auto;
+	}
+	.list_news {
+		display: block;
+		margin-top: 7rem ;
+	}
+	/* lien hệ */
+	.form-group {
+		width: 100% !important;
+		margin: auto;
+		padding: 1rem;
+	}
+
+}
+
+@media all and (max-width: 486px) {
+	.logo {
+		padding: 5px 0 5px 5px;
+	}
+	#header{
+		height: 60px;
+	}
+	.logo{
+		width: auto;
+		height: 100%;
+	}
+	.logo-nemoviz{
+		height: 100%;
+		width: auto;
+	}
+	.mobile_icon ul{
+		padding-left:0;
+	}
+	.text_slide h1{
+		padding-bottom:2rem
+	}
+	#page_3{
+		padding: 30px 10px 0px;
+
+	}
+	#page_6 {
+		padding: 10px 0;
+	}
+	/* trang chủ */
+	#slider_img {
+		height: 55vh ;
+	}
+
+	#page_1{
+		padding-top:30px;
+	}
+	.video_content{
+		font-size: 10px !important;
+	}
+	.watch_video{
+		margin-top:2rem;
+	}
+	.mobile_icon{
+		display: block;
+	}
+
+	.timkiem input {
+		width: 80%;
+		margin-bottom: 10px;
+	}
+
+	.timkiem button {
+		width: 80%;
+	}
+	/* trang chủ */
+	.right_about img {
+		width: 100%;
+		float: right;
+	}
+	.centerab{
+		display: block;
+	}
+	.left_about{
+		width: 100%;
+	}
+	.right_about{
+		width: 100%;
+		display: block;
+		margin-top:2rem;
+	}
+	h1{
+		font-size: 30px;
+	}
+	.content_form{
+		padding-bottom:2rem;
+	}
+	.right_fot{
+		padding-right:0rem;
+		margin-top:0;
+	}
+	.company_nemoviz {
+		width: 100%;
+	}
+
+	.img_doitac{
+		width: 100%;
+	}
+	/* footer */
+	.col-company{
+		display: block;
+	}
+	.company_nemoviz{
+		width: 100%;
+		padding:1rem 3rem;
+	}
+	.contact_company{
+		width: 100%;
+	}
+	.contact_company ul{
+		padding-left:0;
+		padding:1rem 3rem;
+	}
+	.product_company {
+		width: 100%;
+	}
+	.product_company ul {
+		padding: 1rem 3rem;
+	}
+	.contact_company h3{
+		text-align: start;
+		color:#ffff;
+	  padding-left: 2rem;
+	}
+	.list_product {
+		padding-left: 0rem;
+	}
+	/* diên họa 3d */
+	.content_visuali {
+		width: 400px;
+		margin: auto;
+		padding: 0rem 1rem;
+	}
+	.title-visualization {
+		margin: auto;
+		padding-bottom: 2rem;
+		text-align: center;
+	}
+	.item-slide {
+		width: 100%;
+		margin-top:2rem;
+	}
+	.page_item{
+		display: block;
+		margin-top:0;
+	}
+	/* tin tức */
+	.immersive-1{
+		display: block;
+	}
+	.immersive-img{
+		width: 100% ;
+	}
+	.immersive-img iframe{
+		width: 100%;
+	}
+	.immersive-content{
+		width: 100%;
+    padding: 0rem 1.5rem;;
+	}
+	.text-immersive {
+		width: auto;
+	}
+	.list_news {
+		display: block;
+		margin-top:7rem;
+	}
+	.item_news{
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.title_news {
+		position: absolute;
+		z-index: 10;
+		bottom: 0;
+		color: #ffff;
+		padding: 0 2rem;
+	}
+	.title_news {
+		position: absolute;
+		z-index: 10;
+		bottom: 0;
+		color: #ffff;
+		padding: 0 2rem;
+	}
+	.list_news2{
+		display: none;
+	}
+	.product_visual {
+		margin-top: 6rem;
+	}
+	/* item_news */
+	.news_item {
+		display: block;
+	}
+	.news_item_left {
+		width: 100%;
+		display: block;
+		padding:1rem 2rem;
+	}
+	.news_item_right {
+		width: 100%;
+		padding:1rem 2rem;
+		margin-top:2rem;
+	}
+	/* lien hệ */
+	.form-group {
+		width: 100% !important;
+		margin: auto;
+		padding: 1rem;
+	}
+
+
+
+}@media all and (max-width: 320px) {
+	.logo {
+		padding: 5px 0 5px 5px;
+	}
+	#header{
+		height: 60px;
+	}
+	.logo{
+		width: auto;
+		height: 100%;
+	}
+	.logo-nemoviz{
+		height: 100%;
+		width: auto;
+	}
+	.mobile_icon{
+		display: block;
+	}
+	.mobile_icon ul{
+		padding-left:0;
+	}
+	.text_slide h1{
+		padding-bottom:2rem
+	}
+	#page_3{
+		padding: 30px 10px 0px;
+
+	}
+	#page_6 {
+		padding: 10px 0;
+	}
+	/* trang chủ */
+	#slider_img {
+		height: 55vh ;
+	}
+	.slider1_text{
+		display: none;
+	}
+	.video_content{
+		font-size: 10px !important;
+	}
+	.watch_video{
+		margin-top:2rem;
+	}
+	.right_about img {
+		width: 100%;
+		float: right;
+	}
+	#page_1{
+		padding-top:30px;
+	}
+	.centerab{
+		display: block;
+	}
+	.left_about{
+		width: 100%;
+	}
+	.right_about{
+		width: 100%;
+		display: block;
+		margin-top:2rem;
+	}
+	h1{
+		font-size: 30px;
+	}
+	.content_form{
+		padding-bottom:2rem;
+	}
+	.right_fot{
+		padding-right:2rem;
+		margin-top:0;
+	}
+	.company_nemoviz {
+		width: 100%;
+	}
+
+	.img_doitac{
+		width: 100%;
+	}
+	.img_doitac img {
+		width: 50%;
+	}
+
+	/* footer */
+	.col-company{
+		display: block;
+	}
+	.company_nemoviz{
+		width: 100%;
+		padding:1rem 3rem;
+	}
+	.contact_company{
+		width: 100%;
+	}
+	.contact_company ul{
+		padding-left:0;
+		padding:1rem 3rem;
+	}
+	.product_company {
+		width: 100%;
+	}
+	.product_company ul {
+		padding: 1rem 3rem;
+	}
+	.list_product {
+		padding-left: 0rem;
+	}
+	/* diên họa 3d */
+	.content_visuali {
+		width: 300px;
+		margin: auto;
+		padding: 0rem 1rem;
+	}
+	.title-visualization {
+		margin: auto;
+		padding-bottom: 2rem;
+		text-align: center;
+	}
+	.item-slide {
+		width: 100%;
+		margin-top:2rem;
+		padding-right:2rem;
+	}
+	.page_item{
+		display: block;
+		margin-top:0;
+	}
+	/* tin tức */
+	.immersive-1{
+		display: block;
+	}
+	.immersive-img{
+		width: 100% ;
+	}
+	.immersive-img iframe{
+		width: 100%;
+	}
+	.immersive-content{
+		width: 100%;
+    padding: 0rem 1rem;;
+	}
+	.text-immersive {
+		width: auto;
+	}
+	.list_news {
+		display: block;
+		margin-top: 7rem;
+	}
+	.item_news{
+		width: 100%;
+		margin-bottom: 2rem;
+	}
+	.title_news {
+		position: absolute;
+		z-index: 10;
+		bottom: 0;
+		color: #ffff;
+		padding: 0 2rem;
+	}
+	.title_news {
+		position: absolute;
+		z-index: 10;
+		bottom: 0;
+		color: #ffff;
+		padding: 0 2rem;
+	}
+	.list_news2{
+		display: none;
+	}
+	.product_visual {
+		margin-top: 6rem;
+	}
+	/* item_news */
+	.news_item {
+		display: block;
+	}
+	.news_item_left {
+		width: 100%;
+		display: block;
+		padding:1rem 2rem;
+	}
+	.news_item_right {
+		width: 100%;
+		padding:1rem 2rem;
+		margin-top:2rem;
+	}
+	/* lien hệ */
+	.right_fot{
+		padding-right:0;
+	}
+	.form-group {
+		width: 100% !important;
+		margin: auto;
+		padding: 1rem;
+	}
+
+}

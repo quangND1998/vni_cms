@@ -1,0 +1,674 @@
+<div class="product_visual">
+    <div class="tab">
+        <button class="tablinks active" onclick="openCity(event, 'page_all')">All</button>
+        @foreach ($section->category_contents as $category )
+                   <button class="tablinks" onclick="openCity(event, '{{$category->title}}')">{{__($category->title)}}</button>
+
+        @endforeach
+        {{--  <button id="3d" class="tablinks" onclick="openCity(event, 'page_3dRenders')">3D Renders</button>
+        <button class="tablinks" onclick="openCity(event, 'page_3dVideos')">3D videos</button>  --}}
+    </div>
+    <hr class="line-width">
+
+    <div id="page_all" class="tab_content active">
+        <div class=" page_item">
+            @foreach ($section->cate_contents as $content )
+            <div class="item-slide">
+                <div class="product">
+                    @if(count($content->images) < 2 && $content->link == null && $content->video !==null)
+                    <a href="https://www.youtube.com/embed/{{$content->video}}" data-fancybox >
+                        <div class="img_page_video">
+                            @if($content->video)
+                               <img src="http://i3.ytimg.com/vi/{{$content->video}}/hqdefault.jpg" alt="">
+                            @else
+                                @if(count($content->images) >0 )
+                                    <img src="{{$content->images[0]->image}}" alt="">
+                                @endif
+                            @endif
+                             @if($content->video)
+                                <div class="icon_video">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            @endif
+                        </div>
+
+                        {{--  <ul class="list_iconProduct">
+                            <li class="item_iconProduct">
+                                <i class="fas fa-heart"></i>
+                                <span>1276</span>
+                            </li>
+                            <li class="item_iconProduct">
+                                <i class="fas fa-comment"></i>
+                                <span>1276</span>
+                            </li>
+                            <li class="item_iconProduct">
+                                <i class="fas fa-eye"></i>
+                                <span>1276</span>
+                            </li>
+                        </ul>  --}}
+                        <h4 class="title_product"> {{__($content->title)}}</h4>
+                    </a>
+                    @else
+                    <a href="{{route('product.preview',__($content->sub_title))}}"  >
+                        <div class="img_page_video">
+                            @if($content->video)
+                               <img src="http://i3.ytimg.com/vi/{{$content->video}}/hqdefault.jpg" alt="">
+                            @else
+                                @if(count($content->images) >0 )
+                                    <img src="{{$content->images[0]->image}}" alt="">
+                                @endif
+                            @endif
+                             @if($content->video)
+                                <div class="icon_video">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            @endif
+                        </div>
+
+                        {{--  <ul class="list_iconProduct">
+                            <li class="item_iconProduct">
+                                <i class="fas fa-heart"></i>
+                                <span>1276</span>
+                            </li>
+                            <li class="item_iconProduct">
+                                <i class="fas fa-comment"></i>
+                                <span>1276</span>
+                            </li>
+                            <li class="item_iconProduct">
+                                <i class="fas fa-eye"></i>
+                                <span>1276</span>
+                            </li>
+                        </ul>  --}}
+                        <h4 class="title_product"> {{__($content->title)}}</h4>
+                    </a>
+                    @endif
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    @foreach ($section->category_contents as $category )
+    <div id="{{$category->title}}" class="tab_content">
+        <div class=" page_item">
+            @foreach ($category->contents as $content )
+            @if(count($content->images) < 2 && $content->link == null && $content->video !==null)
+            <div class="item-slide">
+                <div class="product">
+                    <a href="https://www.youtube.com/embed/{{$content->video}}" data-fancybox >
+                        <div class="img_page_video">
+                            @if($content->video)
+                               <img src="http://i3.ytimg.com/vi/{{$content->video}}/hqdefault.jpg" alt="">
+                            @else
+                                @if(count($content->images) >0 )
+                                    <img src="{{$content->images[0]->image}}" alt="">
+                                @endif
+                            @endif
+                             @if($content->video)
+                                <div class="icon_video">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            @endif
+                        </div>
+                        {{--  <ul class="list_iconProduct">
+                            <li class="item_iconProduct">
+                                <i class="fas fa-heart"></i>
+                                <span>1276</span>
+                            </li>
+                            <li class="item_iconProduct">
+                                <i class="fas fa-comment"></i>
+                                <span>1276</span>
+                            </li>
+                            <li class="item_iconProduct">
+                                <i class="fas fa-eye"></i>
+                                <span>1276</span>
+                            </li>
+                        </ul>  --}}
+                        <h4 class="title_product"> {{__($content->title)}}</h4>
+                    </a>
+                </div>
+            </div>
+            @else
+            <div class="item-slide">
+                <div class="product">
+                    <a href="{{route('product.preview',__($content->sub_title))}}"  >
+                        <div class="img_page_video">
+                            @if($content->video)
+                               <img src="http://i3.ytimg.com/vi/{{$content->video}}/hqdefault.jpg" alt="">
+                            @else
+                                @if(count($content->images) >0 )
+                                    <img src="{{$content->images[0]->image}}" alt="">
+                                @endif
+                            @endif
+                             @if($content->video)
+                                <div class="icon_video">
+                                    <i class="fas fa-play"></i>
+                                </div>
+                            @endif
+                        </div>
+                        {{--  <ul class="list_iconProduct">
+                            <li class="item_iconProduct">
+                                <i class="fas fa-heart"></i>
+                                <span>1276</span>
+                            </li>
+                            <li class="item_iconProduct">
+                                <i class="fas fa-comment"></i>
+                                <span>1276</span>
+                            </li>
+                            <li class="item_iconProduct">
+                                <i class="fas fa-eye"></i>
+                                <span>1276</span>
+                            </li>
+                        </ul>  --}}
+                        <h4 class="title_product"> {{__($content->title)}}</h4>
+                    </a>
+                </div>
+            </div>
+            @endif
+            @endforeach
+
+
+        </div>
+    </div>
+    @endforeach
+<style>
+    .fancybox-enabled {
+                                            overflow: hidden
+                                        }
+
+                                         .fancybox-enabled body {
+                                            overflow: visible;
+                                            height: 100%
+                                        }
+     .fancybox-container {
+        position: fixed;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            z-index: 9999999;
+                                            -webkit-backface-visibility: hidden;
+                                            backface-visibility: hidden;
+                                         }
+
+                                        .fancybox-container~.fancybox-container {
+                                            z-index: 99992
+                                        }
+                                        .fancybox-bg {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            left: 0;
+                                            background: #0f0f11;
+                                            opacity: 0;
+                                            transition-timing-function: cubic-bezier(.55, .06, .68, .19);
+                                            -webkit-backface-visibility: hidden;
+                                            backface-visibility: hidden
+                                        }
+
+                                        .fancybox-container--ready .fancybox-bg {
+                                            opacity: .87;
+                                            transition-timing-function: cubic-bezier(.22, .61, .36, 1)
+                                        }
+
+                                        .fancybox-controls {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            right: 0;
+                                            text-align: center;
+                                            opacity: 0;
+                                            z-index: 99994;
+                                            transition: opacity .2s;
+                                            pointer-events: none;
+                                            -webkit-backface-visibility: hidden;
+                                            backface-visibility: hidden;
+                                            direction: ltr
+                                        }
+
+                                        .fancybox-show-controls .fancybox-controls {
+                                            opacity: 1
+                                        }
+
+                                        .fancybox-infobar {
+                                            display: none
+                                        }
+
+                                        .fancybox-show-infobar .fancybox-infobar {
+                                            display: inline-block;
+                                            pointer-events: all
+                                        }
+
+                                        .fancybox-infobar__body {
+                                            display: inline-block;
+                                            width: 70px;
+                                            line-height: 44px;
+                                            font-size: 13px;
+                                            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                                            text-align: center;
+                                            color: #ddd;
+                                            background-color: rgba(30, 30, 30, .7);
+                                            pointer-events: none;
+                                            -webkit-user-select: none;
+                                            -moz-user-select: none;
+                                            -ms-user-select: none;
+                                            user-select: none;
+                                            -webkit-touch-callout: none;
+                                            -webkit-tap-highlight-color: transparent;
+                                            -webkit-font-smoothing: subpixel-antialiased
+                                        }
+
+                                        .fancybox-buttons {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            display: none;
+                                            pointer-events: all
+                                        }
+
+                                        .fancybox-show-buttons .fancybox-buttons {
+                                            display: block
+                                        }
+
+                                        .fancybox-slider-wrap {
+                                            overflow: hidden;
+                                            direction: ltr
+                                        }
+
+                                        .fancybox-slider,
+                                        .fancybox-slider-wrap {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            bottom: 0;
+                                            right: 0;
+                                            padding: 0;
+                                            margin: 0;
+                                            z-index: 99993;
+                                            -webkit-backface-visibility: hidden;
+                                            backface-visibility: hidden;
+                                            -webkit-tap-highlight-color: transparent
+                                        }
+
+                                        .fancybox-slide {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            margin: 0;
+                                            padding: 0;
+                                            overflow: auto;
+                                            outline: none;
+                                            white-space: normal;
+                                            box-sizing: border-box;
+                                            text-align: center;
+                                            z-index: 99994;
+                                            -webkit-overflow-scrolling: touch
+                                        }
+
+                                        .fancybox-slide:before {
+                                            content: "";
+                                            height: 100%;
+                                            width: 0
+                                        }
+
+                                        .fancybox-slide:before,
+                                        .fancybox-slide>* {
+                                            display: inline-block;
+                                            vertical-align: middle
+                                        }
+
+                                        .fancybox-slide>* {
+                                            position: relative;
+                                            padding: 24px;
+                                            margin: 44px 0;
+                                            border-width: 0;
+                                            text-align: left;
+                                            background-color: #fff;
+                                            overflow: auto;
+                                            box-sizing: border-box
+                                        }
+
+                                        .fancybox-slide--image {
+                                            overflow: hidden
+                                        }
+
+                                        .fancybox-slide--image:before {
+                                            display: none
+                                        }
+
+                                        .fancybox-content {
+                                            display: inline-block;
+                                            position: relative;
+                                            margin: 44px auto;
+                                            padding: 0;
+                                            border: 0;
+                                            width: 80%;
+                                            height: calc(100% - 88px);
+                                            vertical-align: middle;
+                                            line-height: normal;
+                                            text-align: left;
+                                            white-space: normal;
+                                            outline: none;
+                                            font-size: 16px;
+                                            font-family: Arial, sans-serif;
+                                            box-sizing: border-box;
+                                            -webkit-tap-highlight-color: transparent;
+                                            -webkit-overflow-scrolling: touch
+                                        }
+
+                                        .fancybox-iframe {
+                                            display: block;
+                                            margin: 0;
+                                            padding: 0;
+                                            border: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            background: #fff
+                                        }
+
+                                        .fancybox-slide--video .fancybox-content,
+                                        .fancybox-slide--video .fancybox-iframe {
+                                            background: transparent
+                                        }
+
+                                        .fancybox-placeholder {
+                                            z-index: 99995;
+                                            background: transparent;
+                                            cursor: default;
+                                            overflow: visible;
+                                            -webkit-transform-origin: top left;
+                                            transform-origin: top left;
+                                            background-size: 100% 100%;
+                                            background-repeat: no-repeat;
+                                            -webkit-backface-visibility: hidden;
+                                            backface-visibility: hidden
+                                        }
+
+                                        .fancybox-image,
+                                        .fancybox-placeholder,
+                                        .fancybox-spaceball {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            margin: 0;
+                                            padding: 0;
+                                            border: 0
+                                        }
+
+                                        .fancybox-image,
+                                        .fancybox-spaceball {
+                                            width: 100%;
+                                            height: 100%;
+                                            max-width: none;
+                                            max-height: none;
+                                            background: transparent;
+                                            background-size: 100% 100%
+                                        }
+
+                                        .fancybox-controls--canzoomOut .fancybox-placeholder {
+                                            cursor: zoom-out
+                                        }
+
+                                        .fancybox-controls--canzoomIn .fancybox-placeholder {
+                                            cursor: zoom-in
+                                        }
+
+                                        .fancybox-controls--canGrab .fancybox-placeholder {
+                                            cursor: -webkit-grab;
+                                            cursor: grab
+                                        }
+
+                                        .fancybox-controls--isGrabbing .fancybox-placeholder {
+                                            cursor: -webkit-grabbing;
+                                            cursor: grabbing
+                                        }
+
+                                        .fancybox-spaceball {
+                                            z-index: 1
+                                        }
+
+                                        .fancybox-tmp {
+                                            position: absolute;
+                                            top: -9999px;
+                                            left: -9999px;
+                                            visibility: hidden
+                                        }
+
+                                        .fancybox-error {
+                                            position: absolute;
+                                            margin: 0;
+                                            padding: 40px;
+                                            top: 50%;
+                                            left: 50%;
+                                            width: 380px;
+                                            max-width: 100%;
+                                            -webkit-transform: translate(-50%, -50%);
+                                            transform: translate(-50%, -50%);
+                                            background: #fff;
+                                            cursor: default
+                                        }
+
+                                        .fancybox-error p {
+                                            margin: 0;
+                                            padding: 0;
+                                            color: #444;
+                                            font: 16px/20px Helvetica Neue, Helvetica, Arial, sans-serif
+                                        }
+
+                                        .fancybox-close-small {
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            width: 44px;
+                                            height: 44px;
+                                            padding: 0;
+                                            margin: 0;
+                                            border: 0;
+                                            border-radius: 0;
+                                            outline: none;
+                                            background: transparent;
+                                            z-index: 10;
+                                            cursor: pointer
+                                        }
+
+                                        .fancybox-close-small:after {
+                                            content: "×";
+                                            position: absolute;
+                                            top: 5px;
+                                            right: 5px;
+                                            width: 30px;
+                                            height: 30px;
+                                            font: 20px/30px Arial, Helvetica Neue, Helvetica, sans-serif;
+                                            color: #888;
+                                            font-weight: 300;
+                                            text-align: center;
+                                            border-radius: 50%;
+                                            border-width: 0;
+                                            background: #fff;
+                                            transition: background .2s;
+                                            box-sizing: border-box;
+                                            z-index: 2
+                                        }
+
+                                        .fancybox-close-small:focus:after {
+                                            outline: 1px dotted #888
+                                        }
+
+                                        .fancybox-slide--video .fancybox-close-small {
+                                            top: -36px;
+                                            right: -36px;
+                                            background: transparent
+                                        }
+
+                                        .fancybox-close-small:hover:after {
+                                            color: #555;
+                                            background: #eee
+                                        }
+
+                                        .fancybox-caption-wrap {
+                                            position: absolute;
+                                            bottom: 0;
+                                            left: 0;
+                                            right: 0;
+                                            padding: 60px 30px 0;
+                                            z-index: 99998;
+                                            -webkit-backface-visibility: hidden;
+                                            backface-visibility: hidden;
+                                            box-sizing: border-box;
+                                            background: linear-gradient(180deg, transparent 0, rgba(0, 0, 0, .1) 20%, rgba(0, 0, 0, .2) 40%, rgba(0, 0, 0, .6) 80%, rgba(0, 0, 0, .8));
+                                            opacity: 0;
+                                            transition: opacity .2s;
+                                            pointer-events: none
+                                        }
+
+                                        .fancybox-show-caption .fancybox-caption-wrap {
+                                            opacity: 1
+                                        }
+
+                                        .fancybox-caption {
+                                            padding: 30px 0;
+                                            border-top: 1px solid hsla(0, 0%, 100%, .4);
+                                            font-size: 14px;
+                                            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+                                            color: #fff;
+                                            line-height: 20px;
+                                            -webkit-text-size-adjust: none
+                                        }
+
+                                        .fancybox-caption a,
+                                        .fancybox-caption button {
+                                            pointer-events: all
+                                        }
+
+                                        .fancybox-caption a {
+                                            color: #fff;
+                                            text-decoration: underline
+                                        }
+
+                                        .fancybox-button {
+                                            display: inline-block;
+                                            position: relative;
+                                            width: 44px;
+                                            height: 44px;
+                                            line-height: 44px;
+                                            margin: 0;
+                                            padding: 0;
+                                            border: 0;
+                                            border-radius: 0;
+                                            cursor: pointer;
+                                            background: transparent;
+                                            color: #fff;
+                                            box-sizing: border-box;
+                                            vertical-align: top;
+                                            outline: none
+                                        }
+
+                                        .fancybox-button--disabled {
+                                            cursor: default;
+                                            pointer-events: none
+                                        }
+
+                                        .fancybox-button,
+                                        .fancybox-infobar__body {
+                                            background: rgba(30, 30, 30, .6)
+                                        }
+
+                                        .fancybox-button:hover {
+                                            background: rgba(0, 0, 0, .8)
+                                        }
+
+                                        .fancybox-button:after,
+                                        .fancybox-button:before {
+                                            content: "";
+                                            pointer-events: none;
+                                            position: absolute;
+                                            border-color: #fff;
+                                            background-color: currentColor;
+                                            color: currentColor;
+                                            opacity: .9;
+                                            box-sizing: border-box;
+                                            display: inline-block
+                                        }
+
+                                        .fancybox-button--disabled:after,
+                                        .fancybox-button--disabled:before {
+                                            opacity: .5
+                                        }
+
+                                        .fancybox-button--left:after {
+                                            left: 20px;
+                                            -webkit-transform: rotate(-135deg);
+                                            transform: rotate(-135deg)
+                                        }
+
+                                        .fancybox-button--left:after,
+                                        .fancybox-button--right:after {
+                                            top: 18px;
+                                            width: 6px;
+                                            height: 6px;
+                                            background: transparent;
+                                            border-top: 2px solid currentColor;
+                                            border-right: 2px solid currentColor
+                                        }
+
+                                        .fancybox-button--right:after {
+                                            right: 20px;
+                                            -webkit-transform: rotate(45deg);
+                                            transform: rotate(45deg)
+                                        }
+
+                                        .fancybox-button--left {
+                                            border-bottom-left-radius: 5px
+                                        }
+
+                                        .fancybox-button--right {
+                                            border-bottom-right-radius: 5px
+                                        }
+
+                                        .fancybox-button--close {
+                                            float: right
+                                        }
+
+                                        .fancybox-button--close:after,
+                                        .fancybox-button--close:before {
+                                            content: "";
+                                            display: inline-block;
+                                            position: absolute;
+                                            height: 2px;
+                                            width: 16px;
+                                            top: calc(50% - 1px);
+                                            left: calc(50% - 8px)
+                                        }
+
+                                        .fancybox-button--close:before {
+                                            -webkit-transform: rotate(45deg);
+                                            transform: rotate(45deg)
+                                        }
+
+                                        .fancybox-button--close:after {
+                                            -webkit-transform: rotate(-45deg);
+                                            transform: rotate(-45deg)
+                                        }
+
+                                        .fancybox-loading {
+                                            border: 6px solid hsla(0, 0%, 39%, .4);
+                                            border-top: 6px solid hsla(0, 0%, 100%, .6);
+                                            border-radius: 100%;
+                                            height: 50px;
+                                            width: 50px;
+                                            -webkit-animation: a .8s infinite linear;
+                                            animation: a .8s infinite linear;
+                                            background: transparent;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 50%;
+                                            margin-top: -25px;
+                                            margin-left: -25px;
+                                            z-index: 99999
+                                        }
+
+</style>
+
+</div>
