@@ -16,3 +16,4 @@ yarn-error.log
 /resources/lang/en.json
 /resources/lang/vn.json
 public/images
+public/uploads
