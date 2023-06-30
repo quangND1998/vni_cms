@@ -196,9 +196,9 @@ trait LanguageTrait
         return $value == null ? " " : $value;
     }
 
-    
+
     public function storeLanguageApi($key, $en, $vn){
-      
+
         $response = Http::post(config('api.API_URL').'/language/store', [
             'key' => $key,
             'en' => $en,
@@ -207,7 +207,7 @@ trait LanguageTrait
     }
 
     public function updateLanguageApi($key, $en, $vn){
-      
+
         $response = Http::post(config('api.API_URL').'/language/update', [
             'key' => $key,
             'en' => $en,
@@ -216,21 +216,21 @@ trait LanguageTrait
     }
 
     public function deleteLanguageApi($key, $lang){
-      
+
         $response = Http::delete(config('api.API_URL').'/language/destroy', [
             'key' => $key,
             'lang' => $lang,
-            
+
         ]);
     }
 
     public function saveLanguageApi($key, $en, $vn){
-      
+
         $response = Http::post(config('api.API_URL').'/language/saveLanguage', [
             'key' => $key,
             'en' => $en,
             'vn' => $vn
-            
+
         ]);
     }
 }

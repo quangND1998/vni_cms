@@ -1,5 +1,5 @@
 
 <?php
 return [
-    'API_URL' => 'http://localhost/Project_2022/Holomia_VRShowRoom/public/api/v1',
+    'API_URL' => 'http://localhost:8088/Holomia_VRShowRoom/public/api/v1',
 ];
