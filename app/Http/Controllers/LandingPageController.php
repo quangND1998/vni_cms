@@ -15,7 +15,7 @@ class LandingPageController extends Controller
 {
     public function index()
     {
-        dd(config('api.API_URL'));
+        // dd(config('api.API_URL'));
         $header = Page::with('sections.contents.images',  'sections.theme')->where('title', 'header')->first();
         $page = Page::with(['sections.contents.images', 'sections.category_contents.contents.images', 'sections.theme','sections'=>function($q){
             $q->where('active',1);
