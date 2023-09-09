@@ -112,14 +112,13 @@ class TintucController extends Controller
        
             $tintuc = tintuc::with('languages')->findOrFail($id);
             $language_title = Languages::where('key', $tintuc->TieuDe)->first();
-            $language_sub_title = Languages::where('key', $tintuc->TieuDeKhongDau)->first();
-            $language_description = Languages::where('key', $tintuc->NoiDung)->first();
+
             $this->validate(
                 $request,
                 [
                     
-                    'TieuDe_en' =>  'required|unique:languages,en,' . $language_title->id,
-                    'TieuDe_vn' => 'required|unique:languages,vn,' . $language_title->id,
+                    'TieuDe_en' =>  'required',
+                    'TieuDe_vn' => 'required',
                     'NoiDung_en' => 'required',
                     'NoiDung_vn' => 'required',
                     'image' => 'nullable|mimes:jpeg,jpg,png,',
@@ -155,13 +154,22 @@ class TintucController extends Controller
             $tags = Tag::find($request->tags);
             $tintuc->tags()->sync($tags);
             $tintuc->save();
+            $sub_code = $tintuc->id.Str::random(10);
             $this->updateLanguage($tintuc->TieuDe, $request->TieuDe_en, $request->TieuDe_vn, $tintuc);
-            $this->updateLanguage($tintuc->TieuDeKhongDau, Str::slug($request->TieuDe_en), Str::slug($request->TieuDe_vn), $tintuc);
             $this->updateLanguage($tintuc->NoiDung, $request->NoiDung_en, $request->NoiDung_vn, $tintuc);
+            if($language_title->en !== $request->TieuDe_en || $language_title->vn !== $request->TieuDe_vn)
+            {
+                $this->updateLanguage($tintuc->TieuDeKhongDau, Str::slug($request->TieuDe_en).'-'.$sub_code, Str::slug($request->title_vn).'-'.$sub_code, $tintuc);
+                $this->updateLanguageApi($tintuc->TieuDeKhongDau, Str::slug($request->TieuDe_en).'-'.$sub_code, Str::slug($request->title_vn).'-'.$sub_code);
+            }
+            else{
+                $this->updateLanguage($tintuc->TieuDeKhongDau, Str::slug($request->TieuDe_en), Str::slug($request->TieuDe_vn), $tintuc);
+                $this->updateLanguageApi($tintuc->TieuDeKhongDau, Str::slug($request->TieuDe_en), Str::slug($request->TieuDe_vn));
+            }
 
 
             $this->updateLanguageApi($tintuc->TieuDe, $request->TieuDe_en, $request->TieuDe_vn);
-            $this->updateLanguageApi($tintuc->TieuDeKhongDau, Str::slug($request->TieuDe_en), Str::slug($request->TieuDe_vn));
+           
             $this->updateLanguageApi($tintuc->NoiDung, $request->NoiDung_en, $request->NoiDung_vn);
 
             return redirect('/admin/blogs/tintuc')->with('success', 'Update successfully');

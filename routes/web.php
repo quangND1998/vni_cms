@@ -184,9 +184,9 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('update/{id}', [ThemeController::class, 'update'])->name('themes.update');
         Route::delete('delete/{id}', [ThemeController::class, 'delete'])->name('themes.delete');
     });
+    Route::get('admin/all-content', [ContentController::class, 'all'])->name('content.all');
 
-
-    Route::post('changeActiveSection',[SectionController::class,'changeActive'])->name('section.changeActive');
+    Route::post('changeActiveSection', [SectionController::class, 'changeActive'])->name('section.changeActive');
 });
 Route::get('language/{language}', function ($language) {
     Session()->put('locale', $language);

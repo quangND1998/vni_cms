@@ -57,7 +57,7 @@
               >{{index +1}}</th>
 
               <td class="px-6 py-4">
-                <Link :href="route('section.index',element.id)">{{__(element.title)}}</Link>
+               {{__(element.title)}}
               </td>
               <td class="px-6 py-4 crop-content">{{__(element.sub_title)}}</td>
 

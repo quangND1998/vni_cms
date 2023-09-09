@@ -432,7 +432,7 @@ trait FileUploadTrait
     public function DeleteFolder($attribute, $extension)
     {
 
-        if (file_exists($attribute)) {
+        if (file_exists($attribute) && $attribute) {
 
             $oldzip = explode($extension, $attribute)[0];
             if (!Str::contains($attribute, 'default')) {

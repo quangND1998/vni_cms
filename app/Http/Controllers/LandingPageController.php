@@ -10,36 +10,37 @@ use App\Models\tintuc;
 use App\Models\Languages;
 use App\Models\Section;
 use App\Models\theloai;
-use Illuminate\Support\Facades\Redirect ;
+use Illuminate\Support\Facades\Redirect;
+
 class LandingPageController extends Controller
 {
     public function index()
     {
         // dd(config('api.API_URL'));
         $header = Page::with('sections.contents.images',  'sections.theme')->where('title', 'header')->first();
-        $page = Page::with(['sections.contents.images', 'sections.category_contents.contents.images', 'sections.theme','sections'=>function($q){
-            $q->where('active',1);
+        $page = Page::with(['sections.contents.images', 'sections.category_contents.contents.images', 'sections.theme', 'sections' => function ($q) {
+            $q->where('active', 1);
         }])->first();
 
 
-        $datas = Section::whereHas('page', function ($query) {
-            $query->where('title', 'visualization')->orWhere('title', 'virtual-reality');
-        })->with('contents.images', 'cate_contents.images', 'page', 'contents')->get();
+        // $datas = Section::whereHas('page', function ($query) {
+        //     $query->where('title', 'visualization')->orWhere('title', 'virtual-reality');
+        // })->with('contents.images', 'cate_contents.images', 'page', 'contents')->get();
 
 
-        if (count($datas) > 0) {
-            foreach ($datas as $data) {
-                foreach ($data->cate_contents as $content) {
-                    $contents[] = $content;
-                }
-            }
-        } else {
-            $contents = [];
-        }
-        $sorted = collect($contents)->sortByDesc('created_at');
-        $contents =  $sorted->values();
-
-
+        // if (count($datas) > 0) {
+        //     foreach ($datas as $data) {
+        //         foreach ($data->cate_contents as $content) {
+        //             $contents[] = $content;
+        //         }
+        //     }
+        // } else {
+        //     $contents = [];
+        // }
+        // $sorted = collect($contents)->sortBy('id_priority');
+        // $contents =  $sorted->values();
+        $contents = Content::with('images')->orderBy('id_priority', 'asc')->orderBy('id', 'asc')->get();
+        // return $contents;
         $news = tintuc::with('languages', 'theloai', 'tags')->where('NoiBat', 1)->get();
 
 
@@ -52,8 +53,8 @@ class LandingPageController extends Controller
 
     public function tintuc()
     {
-        $page = Page::with(['sections.contents.images', 'sections.category_contents.contents.images', 'sections.theme','sections'=>function($q){
-            $q->where('active',1);
+        $page = Page::with(['sections.contents.images', 'sections.category_contents.contents.images', 'sections.theme', 'sections' => function ($q) {
+            $q->where('active', 1);
         }])->where('title', 'news')->first();
         $pages = Page::orderBy('id_priority', 'asc')->orderBy('id', 'asc')->get();
         $news = tintuc::with('languages', 'theloai', 'tags')->orderBy('created_at', 'desc')->take(6)->get();
@@ -66,8 +67,8 @@ class LandingPageController extends Controller
 
         $header = Page::with('sections.contents.images',  'sections.theme')->where('title', 'header')->first();
         $pages = Page::orderBy('id_priority', 'asc')->orderBy('id', 'asc')->get();
-        $visual = Page::with(['sections.contents.images', 'sections.cate_contents', 'sections.category_contents.contents.images', 'sections.theme' ,'sections'=>function($q){
-            $q->where('active',1);
+        $visual = Page::with(['sections.contents.images', 'sections.cate_contents', 'sections.category_contents.contents.images', 'sections.theme', 'sections' => function ($q) {
+            $q->where('active', 1);
         }])->where('title', 'visualization')->first();
 
         return view('landingpage.visualization', compact('pages', 'visual', 'header'));
@@ -78,8 +79,8 @@ class LandingPageController extends Controller
         $header = Page::with('sections.contents.images',  'sections.theme')->where('title', 'header')->first();
 
         $pages = Page::orderBy('id_priority', 'asc')->orderBy('id', 'asc')->get();
-        $visual = Page::with(['sections.contents.images', 'sections.cate_contents', 'sections.languages', 'sections.category_contents.contents.images', 'sections.theme','sections'=>function($q){
-            $q->where('active',1);
+        $visual = Page::with(['sections.contents.images', 'sections.cate_contents', 'sections.languages', 'sections.category_contents.contents.images', 'sections.theme', 'sections' => function ($q) {
+            $q->where('active', 1);
         }])->where('title', 'virtual-reality')->first();
         return view('landingpage.virtual_reality', compact('pages', 'visual', 'header'));
     }
@@ -89,8 +90,8 @@ class LandingPageController extends Controller
     {
         $header = Page::with('sections.contents.images',  'sections.theme')->where('title', 'header')->first();
         $pages = Page::orderBy('id_priority', 'asc')->orderBy('id', 'asc')->get();
-        $page = Page::with(['sections.contents.images', 'sections.category_contents.contents.images', 'sections.theme','sections'=>function($q){
-            $q->where('active',1);
+        $page = Page::with(['sections.contents.images', 'sections.category_contents.contents.images', 'sections.theme', 'sections' => function ($q) {
+            $q->where('active', 1);
         }])->where('title', 'contact')->first();
         $sections = $page->sections;
         return view('landingpage.contact', compact('pages', 'sections', 'header'));
@@ -105,7 +106,7 @@ class LandingPageController extends Controller
             $content = Content::with('images')->findOrFail($language->languageable->id);
             if (count($content->images) < 2 && $content->link != null) {
                 return  Redirect::to($content->link);
-            }else{
+            } else {
                 return view('landingpage.product_image_video_tour', compact('pages', 'content', 'header'));
             }
         } else {
