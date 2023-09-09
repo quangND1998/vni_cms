@@ -114,10 +114,10 @@
           Pages
           </Link>
           <Link :class="[$page.url.startsWith('/admin/all-content') ? 'opacity-75 text-blue-300 bg-coolGray-900' : '']"
-            :href="route('content.all')"
+            :href="route('content.visual-reality')"
             class=" px-4 py-2.5 flex flex-wrap text-blueGray-300 hover:text-blueGray-400 text-sm  mb-1 no-underline font-semibold">
           <icon name="page" class="mr-1 text-blueGray-300 text-base"></icon>
-          Contents
+          Contents VR
           </Link>
           <Link :class="[$page.component === 'Blog/Tintuc' ? 'opacity-75 text-blue-300 bg-coolGray-900' : '']"
             :href="route('tintuc.index')"

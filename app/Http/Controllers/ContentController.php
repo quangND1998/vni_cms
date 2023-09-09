@@ -38,7 +38,22 @@ class ContentController extends Controller
 
     public function all()
     {
-        $contents = Content::with('images')->orderBy('id_priority', 'asc')->orderBy('id', 'asc')->get();
+        $datas = Section::whereHas('page', function ($query) {
+            $query->where('title', 'visualization')->orWhere('title', 'virtual-reality');
+        })->with('contents.images', 'cate_contents.images', 'page', 'contents')->get();
+        if (count($datas) > 0) {
+            foreach ($datas as $data) {
+                foreach ($data->cate_contents as $content) {
+                    $contents[] = $content;
+                }
+            }
+        } else {
+            $contents = [];
+        }
+        // return $contents ;
+
+        $sorted = collect($contents)->sortBy('id_priority');
+        $contents =  $sorted->values();
         return Inertia::render('Content/GetAll', compact('contents'));
     }
 

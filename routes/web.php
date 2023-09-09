@@ -184,7 +184,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
         Route::post('update/{id}', [ThemeController::class, 'update'])->name('themes.update');
         Route::delete('delete/{id}', [ThemeController::class, 'delete'])->name('themes.delete');
     });
-    Route::get('admin/all-content', [ContentController::class, 'all'])->name('content.all');
+    Route::get('admin/content-visual-reality', [ContentController::class, 'all'])->name('content.visual-reality');
 
     Route::post('changeActiveSection', [SectionController::class, 'changeActive'])->name('section.changeActive');
 });
